@@ -1,9 +1,3 @@
-# Article_type_classification
-
-Creating a README file for your GitHub repository involves detailing the purpose of the project, the dependencies, installation steps, and usage instructions. Below is a sample README file for your article type classification project:
-
----
-
 # Article Type Classification
 
 This repository contains a machine learning project for classifying articles into various categories such as 'Commercial', 'Military', 'Executives', 'Others', 'Support & Services', 'Financing', and 'Training'. The project utilizes text data and employs natural language processing (NLP) techniques and machine learning models to perform the classification.
@@ -34,7 +28,7 @@ Article_type_classification/
 ├── class_names.pkl                          # Pickle file containing class names
 ├── preprocess.py                            # Script for data preprocessing
 ├── requirements.txt                         # Dependencies file
-├── unknown_articles.csv                     # Dataset with unknown articles for prediction
+├── unknown_articles.csv                     # Dataset with unknown articles URLs for prediction
 └── url_article_type_prediction.ipynb        # Notebook for URL based predictions
 ```
 
@@ -59,6 +53,7 @@ cd Article_type_classification
 
 ```bash
 pip install -r requirements.txt
+python -m spacy download en_core_web_sm
 ```
 
 3. Download and place the necessary models and data files in the project directory:
@@ -72,19 +67,11 @@ pip install -r requirements.txt
 
 ### Running the Flask App
 
-1. Start the Flask app:
+Start the Flask app:
 
 ```bash
 python app.py
 ```
-
-2. Expose the Flask app to the internet using ngrok:
-
-```bash
-ngrok http 5000
-```
-
-3. Access the app through the provided ngrok URL.
 
 ### Predicting Article Types
 
@@ -98,10 +85,4 @@ To train the model, use the `Article_type_classification_final.ipynb` notebook. 
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## License
 
-This project is licensed under the MIT License.
-
----
-
-Feel free to customize this README file as per your specific project details and requirements.
