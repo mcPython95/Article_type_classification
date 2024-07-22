@@ -13,7 +13,7 @@ This repository contains a machine learning project for classifying articles int
 
 ## Overview
 
-The goal of this project is to build a text classification model that can accurately predict the type of an article based on its content. The project includes data preprocessing, model training, and deployment using Flask and ngrok.
+The goal of this project is to build a text classification model that can accurately predict the type of an article based on its content. The project includes data preprocessing, model training, and deployment using Flask.
 
 ## Project Structure
 
