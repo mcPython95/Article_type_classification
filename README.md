@@ -1,4 +1,4 @@
-# Smart Article Type Classification with ML: Leveraging SentenceBERT and Linear SVC for Accurate Category Prediction and API Endpoint Deployment
+# Smart Article Type Classification with ML: Leveraging SentenceBERT and Linear SVC for Accurate Category Prediction and Serving the trained model thorugh an API Endpoint 
 
 This repository contains a machine learning project for classifying articles into various categories such as 'Commercial', 'Military', 'Executives', 'Others', 'Support & Services', 'Financing', and 'Training'. The project utilizes text data and employs natural language processing (NLP) techniques and machine learning models to perform the classification.
 
