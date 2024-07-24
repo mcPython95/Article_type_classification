@@ -1,6 +1,6 @@
-# Smart Article Type Classification with ML: Leveraging SentenceBERT and Linear SVC for Accurate Category Prediction and Serving the trained model thorugh an API Endpoint 
+# Smart Article Type Text Classification with Machine Learning : Leveraging SentenceBERT and Linear SVC for Accurate Category Prediction and Serving the trained model thorugh an API Endpoint 
 
-This repository contains a machine learning project for classifying articles into various categories such as 'Commercial', 'Military', 'Executives', 'Others', 'Support & Services', 'Financing', and 'Training'. The project utilizes text data and employs natural language processing (NLP) techniques and machine learning models to perform the classification.
+This repository contains a machine learning project for classifying articles based on the text data into various categories such as 'Commercial', 'Military', 'Executives', 'Others', 'Support & Services', 'Financing', and 'Training'. The project utilizes text data and employs natural language processing (NLP) techniques and machine learning models to perform the classification.
 
 ## Table of Contents
 - [Overview](#overview)
@@ -43,13 +43,39 @@ python -m spacy download en_core_web_sm
 
 ## Installation
 
-1. Clone the repository:
+1. Clone the repository (in Colab):
 
 ```bash
 git clone https://github.com/mcPython95/Article_type_classification.git
 cd Article_type_classification
 ```
 
+### Training the Model
+
+To train the model, use the `Article_type_classification_final.ipynb` notebook. This notebook contains the complete workflow for data preprocessing, model training, and evaluation.
+
+### Save the model 
+
+1. `article_type_classifier_model.pkl` - This file contains the trained model for classifying article types. It is a pickled object of your model and can be loaded using `pickle.load()`.
+
+2. `class_names.pkl` - This file contains the list of class names used by the model. It is a pickled object that maps the class indices to human-readable names. It can be loaded using `pickle.load()`.
+
+### Predicting Article Types
+
+You can use the `url_article_type_prediction.ipynb` notebook to predict the types of articles from a list of URLs. Simply open the notebook and follow the instructions.
+
+
+## Usage
+
+### Running the Flask App (Use VScode or any code editor)
+
+1. Download and place the necessary models and data files in the project directory:
+
+   - `article_type_classifier_model.pkl`
+   - `class_names.pkl`
+   - `articles.csv`
+   - `unknown_articles.csv`
+     
 2. Create a virtual environment:
 
 ```bash
@@ -75,32 +101,15 @@ python -m venv venv
 ```bash
 pip install -r requirements.txt
 python -m spacy download en_core_web_sm
-```
+```     
 
-5. Download and place the necessary models and data files in the project directory:
-
-   - `article_type_classifier_model.pkl`
-   - `class_names.pkl`
-   - `articles.csv`
-   - `unknown_articles.csv`
-
-## Usage
-
-### Running the Flask App
-
-Start the Flask app:
+5. Start the Flask app:
 
 ```bash
 python app.py
 ```
 
-### Predicting Article Types
 
-You can use the `url_article_type_prediction.ipynb` notebook to predict the types of articles from a list of URLs. Simply open the notebook and follow the instructions.
-
-### Training the Model
-
-To train the model, use the `Article_type_classification_final.ipynb` notebook. This notebook contains the complete workflow for data preprocessing, model training, and evaluation.
 
 ## Contributing
 
