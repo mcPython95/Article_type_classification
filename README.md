@@ -54,6 +54,16 @@ cd Article_type_classification
 
 To train the model, use the `Article_type_classification_final.ipynb` notebook. This notebook contains the complete workflow for data preprocessing, model training, and evaluation.
 
+
+### Download files 
+
+Download the data files in the project directory:
+
+1. `articles.csv` - This file contains the dataset of known articles used for training and evaluating the classification model. It includes features and labels necessary for model development.
+
+2. `unknown_articles.csv` - This file contains a list of links to articles with unknown categories. These links will need to be accessed and the content extracted for classification by the trained model.
+
+
 ### Save the model 
 
 1. `article_type_classifier_model.pkl` - This file contains the trained model for classifying article types. It is a pickled object of your model and can be loaded using `pickle.load()`.
@@ -73,8 +83,6 @@ You can use the `url_article_type_prediction.ipynb` notebook to predict the type
 
    - `article_type_classifier_model.pkl`
    - `class_names.pkl`
-   - `articles.csv`
-   - `unknown_articles.csv`
      
 2. Create a virtual environment:
 
