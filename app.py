@@ -124,4 +124,4 @@ def predict():
     return render_template_string(html_prediction_template, predicted_label=predicted_label)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
