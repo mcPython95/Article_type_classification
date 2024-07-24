@@ -1,4 +1,4 @@
-# Article Type Classification
+# Smart Article Type Classification with ML: Leveraging SentenceBERT and Linear SVC for Accurate Category Prediction and API Endpoint Deployment
 
 This repository contains a machine learning project for classifying articles into various categories such as 'Commercial', 'Military', 'Executives', 'Others', 'Support & Services', 'Financing', and 'Training'. The project utilizes text data and employs natural language processing (NLP) techniques and machine learning models to perform the classification.
 
@@ -50,19 +50,39 @@ git clone https://github.com/mcPython95/Article_type_classification.git
 cd Article_type_classification
 ```
 
-2. Install the dependencies:
+2. Create a virtual environment:
+
+```bash
+python -m venv venv
+```
+
+3. Activate the virtual environment:
+
+   - **On Windows:**
+
+     ```bash
+     venv\Scripts\activate
+     ```
+
+   - **On macOS/Linux:**
+
+     ```bash
+     source venv/bin/activate
+     ```
+
+4. Install the dependencies:
 
 ```bash
 pip install -r requirements.txt
 python -m spacy download en_core_web_sm
 ```
 
-3. Download and place the necessary models and data files in the project directory:
+5. Download and place the necessary models and data files in the project directory:
 
-- `article_type_classifier_model.pkl`
-- `class_names.pkl`
-- `articles.csv`
-- `unknown_articles.csv`
+   - `article_type_classifier_model.pkl`
+   - `class_names.pkl`
+   - `articles.csv`
+   - `unknown_articles.csv`
 
 ## Usage
 
@@ -85,5 +105,3 @@ To train the model, use the `Article_type_classification_final.ipynb` notebook. 
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
-
-
